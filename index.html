@@ -1,1 +1,275 @@
-Hello World
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>Tabuada</title>
+    <script type="text/javascript" src="jquery-1.11.0.js"></script>
+    <style type="text/css">
+      
+      *,
+      *:after,
+      *:before
+      {
+        border: none;
+        margin: 0;
+        outline: none;
+        padding: 0;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing   : border-box;
+        box-sizing        : border-box;
+      }
+
+      body
+      {
+        background-color: #fff;
+        color: #333; 
+        font: 1em sans-serif;
+        height: 100%;
+      }
+
+      #wrap
+      {
+        min-height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+
+      h1
+      {
+        background-color: #333;
+        background: radial-gradient(circle,#555,#333);
+        color: #ccc;
+        font-size: 5em;
+        font-weight: normal;
+        padding: 30px 0;
+        text-align: center;
+        text-shadow: #000  1px 1px 0;
+      }
+
+      h2
+      {
+        background-color: #ccc;
+        color: #333;
+        font-size: 3.5em;
+        font-weight: normal;
+        padding: 15px 0;
+        text-align: center;
+        text-shadow: #eee  1px 1px 0;
+      }
+
+      a
+      {
+        color: #36f;
+        text-decoration: none;
+      }
+
+      ol
+      {
+        padding-bottom: 30px;
+      }
+
+      li
+      {
+        background-color: #ccc;
+        border-radius: 50%;
+        display: inline-block;
+        list-style: none;
+        margin: 0 5px;
+        padding: 15px;
+        width: 50px;
+      }
+
+      nav
+      {
+        background-color: #eee;
+        display: block;
+        margin: 0 auto;
+        padding: 30px;
+        text-align: center;
+      }
+
+      nav button
+      {
+        background-color: transparent;
+        border-left: 2px solid #666;
+        color: #333;
+        cursor: pointer;
+        display: block;
+        float: left;
+        font-size: 2em;
+        font-weight: bold;
+        margin: 0;
+        padding: 15px;
+        text-shadow: #fff 1px 1px 0;
+        width: 100px;
+      }
+
+      nav button:first-child
+      {
+        border-left: none;
+      }
+
+      nav button:hover
+      {
+        background: radial-gradient(transparent,rgba(0,0,0,0.3));
+        background-color: rgba(0,0,0,0.1);
+        color: #fff;
+        text-shadow: none;
+      }
+
+      section
+      {
+        background-color: #fff;
+        display: none;
+        margin-bottom: 80px;
+        text-align: center;
+      }
+
+      section p
+      {
+        font-size: 1.2em;
+        padding: 30px;
+      }
+
+      #main-nav-wrap
+      {
+        border-radius: 25px;
+        box-shadow: 0 0 0 2px #666,0 0 15px 4px #999;
+        margin: 0 auto;
+        width: 400px;
+      }
+
+      #nav-sum
+      {
+        border-radius: 25px 0 0 25px;
+      }
+
+      #nav-div
+      {
+        border-radius: 0 25px 25px 0;
+      }
+
+      footer
+      {
+        background-color: #333;
+        bottom: 0;
+        color: #ccc;
+        margin-top: 30px;
+        padding: 30px;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+      }
+
+    </style>
+    <script type="text/javascript">
+
+      $(document).ready(function()
+      {
+
+        var ArrTabuada = 
+        [
+          ArrSoma = 
+          [
+            ArrSoma01 = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]
+          ]
+        ];
+
+        // alert(ArrSoma01[7]);
+
+        $('#main-nav button').click(function() 
+        {
+          $('section').css('display', 'none');
+
+          if ( $(this).attr('id') == "nav-sum" ){$('#sum').slideDown()}
+          if ( $(this).attr('id') == "nav-sub" ){$('#sub').slideDown()}
+          if ( $(this).attr('id') == "nav-mul" ){$('#mul').slideDown()}
+          if ( $(this).attr('id') == "nav-div" ){$('#div').slideDown()}
+        });
+      });
+
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <h1>Tabuada</h1>
+      <nav id="main-nav">
+        <div id="main-nav-wrap">
+          <button id="nav-sum">+</button>
+          <button id="nav-sub">-</button>
+          <button id="nav-mul">x</button>
+          <button id="nav-div">÷</button>
+          <div style="clear:both"></div>
+        </div>
+      </nav>
+      <section id="sum">
+        <h2>Adição</h2>
+        <p>Escolha qual tabuada de adição você quer treinar:</p>
+        <ol>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#">9</a></li>
+          <li><a href="#">10</a></li>
+        </ol>
+      </section>
+      <section id="sub">
+        <h2>Subtração</h2>
+        <p>Escolha qual tabuada de subtração você quer treinar:</p>
+        <ol>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#">9</a></li>
+          <li><a href="#">10</a></li>
+        </ol>
+      </section>
+      <section id="mul">
+        <h2>Multiplicação</h2>
+        <p>Escolha qual tabuada de multiplicação você quer treinar:</p>
+        <ol>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#">9</a></li>
+          <li><a href="#">10</a></li>
+        </ol>
+      </section>
+      <section id="div">
+        <h2>Divisão</h2>
+        <p>Escolha qual tabuada de divisão você quer treinar:</p>
+        <ol>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#">9</a></li>
+          <li><a href="#">10</a></li>
+        </ol>
+      </section>
+      <footer>
+        <p>Desenvolvido por <a href="https://www.facebook.com/joaopaulo.saragossa" target="blanc">João Paulo Saragossa</a></p>  
+      </footer>
+    </div>
+  </body>
+</html>
